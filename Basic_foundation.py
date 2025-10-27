@@ -20,6 +20,20 @@ print(f"hello, {name}")
 first,last= name.split(" ")
 print(f"hello, {first}")
 
+#creating the simple input to calculate
+x = int(input("what's is x? "))                        
+y = int(input("what's is y? "))
+print(x+y)
+
+#round(number[, ndigits])
+x = float(input("what's is x? "))
+y = float(input("what's is y? "))
+z = round(x/y, 2)
+print(z)
+#just for the more formatting
+z = x/y
+print(f"{z:.2f}")
+
 
 
 
