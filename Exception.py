@@ -1,6 +1,7 @@
+'''
 print("hello, world)
 #SyntaxError need to fix by me
-
+'''
 
 
 x = int(input("what's x? "))
