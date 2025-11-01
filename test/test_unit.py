@@ -1,4 +1,4 @@
-'''
+#For test 1
 from Unit_Test import square
 
 def main():
@@ -73,8 +73,9 @@ def test_negative():
 def test_zero():
     assert square(0) == 0
     
-'''
 
+
+#For test 2
 from Unit_Test import hello
 
 def test_argument():
