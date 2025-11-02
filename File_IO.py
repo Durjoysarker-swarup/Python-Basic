@@ -99,9 +99,9 @@ def get_name(ndic):
 for student in sorted(data, key=get_name):
     print(f"{student['name']} is in {student['address']}")
 
-'''
 
 #pythonic 2
+
 data = []
 with open("student.csv") as file:
     for line in file:
@@ -111,4 +111,57 @@ with open("student.csv") as file:
 
 for student in sorted(data, key=lambda ndic: ndic["name"]): #why ndic is needed
     print(f"{student['name']} is in {student['address']}")
+
+
+#When you get a comma in the file
+import csv
+
+data = []
+with open("student.csv") as file:
+    reader = csv.reader(file) #Returns the row value in a list.
+    #for row in reader:
+       # data.append({"name": row[0], "home": row[1]})
+    for name, home in reader:
+        data.append({"name": name, "home": home})
+
+
+for student in sorted(data, key=lambda student: student["name"]): #why ndic is needed
+    print(f"{student['name']} is in {student['home']}")
+
+
+
+#coding defeancively
+import csv
+students = []
+
+with open("student.csv") as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        students.append({"name": row["name"], "home": row["home"]})
+
+for student in sorted(students, key= lambda student: student["name"]):
+    print(f"{student['name']} is in {student['home']}")
+
+
+#write in the csv file
+import csv
+
+name = input("what's your name? ")
+home = input("what's your home? ")
+
+with open("student.csv", "a") as file:
+    writer = csv.writer(file)
+    writer.writerow([name, home])
+'''
+
+#pythonic 1
+import csv
+
+name = input("what's your name? ")
+home = input("what's your home? ")
+
+with open("student.csv", "a") as file:
+    writer = csv.DictWriter(file, fieldnames=["name" , "home"])
+    writer.writerow({"name": name , "home": home})
+
 
