@@ -11,7 +11,7 @@ for name in sorted(names): #shoted is a default function which sort the string
 #open -> if you want to read and write on the file.
 name = input("what's your name? ")
 
-file = open("names.txt","w")  #w for write #it overwrite it.recreating it
+file = open("names.txt","w")  #w for write. it overwrite it.recreating it
 file.write(name) 
 file.close()
 
@@ -24,7 +24,7 @@ file.write(f"{name}\n")
 file.close()
 
 
-#"a" -> append to add in the text
+#"a" -> append to add in the text. It is the standard way, hare you don't need to close the file and it will automatically closed.
 name = input("what's your name? ")
 
 with open("names.txt","a") as file:
@@ -90,9 +90,7 @@ data = []
 with open("student.csv") as file:
     for line in file:
         name, address = line.rstrip().split(",")
-        ndic = {}
-        ndic["name"] = name
-        ndic["address"] = address
+        ndic = {"name":name , "address": address}
         data.append(ndic)
         
 def get_name(ndic):
@@ -103,7 +101,6 @@ for student in sorted(data, key=get_name):
 
 '''
 
-
 #pythonic 2
 data = []
 with open("student.csv") as file:
@@ -111,15 +108,7 @@ with open("student.csv") as file:
         name, address = line.rstrip().split(",")
         ndic = {"name":name , "address": address}
         data.append(ndic)
-'''
-def get_name(ndic): #find why ndic is important?
-    return ndic["name"]
 
-for student in sorted(data, key=get_name): #find why student and understand the logic more
-    print(f"{student['name']} is in {student['address']}")
-
-'''
-#pythonic 3 -> using lambda where create a fuction which you just use one
 for student in sorted(data, key=lambda ndic: ndic["name"]): #why ndic is needed
     print(f"{student['name']} is in {student['address']}")
 
