@@ -41,6 +41,8 @@ else:
 # \s whitespace charecters
 # \S not a whitespace charecters
 
+#re.IGNORECASE -> ignore the uppercase and lowercase
+
 
 import re
 
@@ -53,7 +55,7 @@ email = input("What's your email? ")
 #if re.search(r"^[^@]+@[^@]+\.[^.]edu$", email): #[^@] -> anything except @
 #if re.search(r"^[a-zA-Z0-9_]+@[a-zA-Z0-9_]+\.edu$", email):
 #if re.search(r"^\w+@\w+\.edu$", email):
-if re.search(r"^\w+@\w+\.(edu|com|gov|net)$", email):
+if re.search(r"^\w+@\w+\.(edu|com|gov|net)$", email , re.IGNORECASE):
     print("Valid")
 else:
     print("Invalid")
