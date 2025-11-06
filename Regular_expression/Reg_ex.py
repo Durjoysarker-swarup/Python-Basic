@@ -40,6 +40,8 @@ else:
 # \D not a decimal digit
 # \s whitespace charecters
 # \S not a whitespace charecters
+# A|b -> either A or B
+ 
 
 #re.IGNORECASE -> ignore the uppercase and lowercase
 
@@ -55,12 +57,13 @@ email = input("What's your email? ")
 #if re.search(r"^[^@]+@[^@]+\.[^.]edu$", email): #[^@] -> anything except @
 #if re.search(r"^[a-zA-Z0-9_]+@[a-zA-Z0-9_]+\.edu$", email):
 #if re.search(r"^\w+@\w+\.edu$", email):
-if re.search(r"^\w+@\w+\.(edu|com|gov|net)$", email , re.IGNORECASE):
+if re.search(r"^(\w|\.)+@(\w\.)?\w+\.(edu|com)$", email , re.IGNORECASE):  # hare () first group the word and then ? mark express that this group is optional means this may be 0 repetation or 1 repetation.
     print("Valid")
 else:
     print("Invalid")
 
 
+#you can used the library to get the regular expression
 
 
 
