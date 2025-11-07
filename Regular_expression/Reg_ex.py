@@ -41,7 +41,8 @@ else:
 # \s whitespace charecters
 # \S not a whitespace charecters
 # A|b -> either A or B
- 
+# (...) -> a group
+# (?:...) -> non-capturing version
 
 #re.IGNORECASE -> ignore the uppercase and lowercase
 
@@ -66,4 +67,8 @@ else:
 #you can used the library to get the regular expression
 
 
-
+'''
+more from the regular expression
+re.sub(pattern, relp, string, count=0, flags=0)
+re.split(pattern, relp, string, count=0, flags=0)
+'''
