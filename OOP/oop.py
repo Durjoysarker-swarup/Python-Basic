@@ -197,7 +197,7 @@ class Student:
         #return "a student"
         return f"{self.name} from {self.house}"
     
-    def do(self):
+    def opinion(self):
         match self.skill:
             case "Python":
                 return "you are doing well"
@@ -210,8 +210,8 @@ class Student:
 
 def main():
     student = get_student()
-    print("My suggesion or guess:")
-    print(student.do())
+    print("My opinion:")
+    print(student.opinion())
     
 def get_student():
     name = input("Name: ")
