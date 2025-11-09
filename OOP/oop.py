@@ -38,7 +38,6 @@ def get_student():
 if __name__ == "__main__":
     main()
 #as the student is a tupple that's why you cannot change this and mutate the student.
-'''
 
 #pythonic 3
 #by the list
@@ -55,5 +54,99 @@ def get_student():
     
 if __name__ == "__main__":
     main()
+
    
+#pythonic 3
+#Hare using the dictonary to be more clear about the data.
+#dictonary use the_name["attribute"] to get it.
+def main():
+    student = get_student()
+    if student["name"] == "Swarup":
+        student["house"] = "Bogura"
+    print(f"{student['name']} from {student['house']}")
+
+def get_student():
+    #student = {}
+    #student["name"] = input("Name: ")
+    #student["house"] = input("House: ")
+    #return student
     
+    name = input("Name: ")
+    house = input("House: ")
+    return {"name": name , "house": house}
+    
+    
+if __name__ == "__main__":
+    main()
+
+  
+    
+#pythonic 4 --> collect more data
+# classses -> you can define, the type, and give them a name. OOP man work.
+class Student:
+    ...
+
+def main():
+    student = get_student()
+    print(f"{student.name} from {student.house}")
+
+def get_student():
+    student = Student()
+    student.name = input("Name: ")
+    student.house = input("House: ")
+    return student
+
+
+    
+if __name__ == "__main__":
+    main()
+
+#When you use the class you are create an object. 
+#Clases is the blueprint of an house. Object is the things that you use to build the house.
+
+
+#pythonic 5
+class Student:
+    def __init__(self, name, house): #instance method
+        self.name = name
+        self.house = house 
+        
+
+def main():
+    student = get_student()
+    print(f"{student.name} from {student.house}")
+    
+def get_student():
+    name = input("Name: ")
+    house = input("House: ")
+    return Student(name,house) 
+    
+if __name__ == "__main__":
+    main()
+'''
+
+#pythonic 6
+class Student:
+    def __init__(self, name, house): #instance method
+        if not name:
+            raise ValueError("Missing Name")    #try to tell the programmer something is wrong
+        if house not in ["Bogura","Sylhet","Rajshahi"]:
+            raise ValueError("Invalid House")
+        self.name = name
+        self.house = house 
+        
+
+def main():
+    student = get_student()
+    print(f"{student.name} from {student.house}")
+    
+def get_student():
+    name = input("Name: ")
+    house = input("House: ")
+    return Student(name,house)
+    
+    
+if __name__ == "__main__":
+    main()
+
+
