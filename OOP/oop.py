@@ -123,7 +123,7 @@ def get_student():
     
 if __name__ == "__main__":
     main()
-'''
+
 
 #pythonic 6
 class Student:
@@ -148,5 +148,80 @@ def get_student():
     
 if __name__ == "__main__":
     main()
+
+
+
+#pythonic 7
+class Student:
+    def __init__(self, name, house): #instance method
+        if not name:
+            raise ValueError("Missing Name")    #try to tell the programmer something is wrong
+        if house not in ["Bogura","Sylhet","Rajshahi"]:
+            raise ValueError("Invalid House")
+        self.name = name
+        self.house = house 
+        
+    def __str__(self):
+        #return "a student"
+        return f"{self.name} from {self.house}"
+
+def main():
+    student = get_student()
+    print(student)
+    
+def get_student():
+    name = input("Name: ")
+    house = input("House: ")
+    return Student(name,house)
+    
+    
+if __name__ == "__main__":
+    main()
+
+'''
+
+
+#pythonic 8
+#Creating my own function in the class
+class Student:
+    def __init__(self, name, house, skill): #instance method
+        if not name:
+            raise ValueError("Missing Name")    #try to tell the programmer something is wrong
+        if house not in ["Bogura","Sylhet","Rajshahi"]:
+            raise ValueError("Invalid House")
+        self.name = name
+        self.house = house 
+        self.skill = skill
+        
+    def __str__(self):
+        #return "a student"
+        return f"{self.name} from {self.house}"
+    
+    def do(self):
+        match self.skill:
+            case "Python":
+                return "you are doing well"
+            case "Machine learning":
+                return "I know you are learning this form NBICT"
+            case "R language":
+                return "Thanks to Hira Lal sir"
+            case _:
+                return "Need action" 
+
+def main():
+    student = get_student()
+    print("My suggesion or guess:")
+    print(student.do())
+    
+def get_student():
+    name = input("Name: ")
+    house = input("House: ")
+    skill = input("Skill: ")
+    return Student(name,house, skill)
+    
+    
+if __name__ == "__main__":
+    main()
+
 
 
