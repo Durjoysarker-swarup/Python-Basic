@@ -87,7 +87,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments">Comments</a></li>
   <li><a href="#adding-the-in-the-print-function-output" id="toc-adding-the-in-the-print-function-output" class="nav-link" data-scroll-target="#adding-the-in-the-print-function-output">Adding the “” in the print function output</a></li>
   <li><a href="#format" id="toc-format" class="nav-link" data-scroll-target="#format">Format</a></li>
-  <li><a href="#most-effective-way" id="toc-most-effective-way" class="nav-link" data-scroll-target="#most-effective-way">Most effective way</a></li>
+  <li><a href="#pythonic-1" id="toc-pythonic-1" class="nav-link" data-scroll-target="#pythonic-1">Pythonic 1</a></li>
+  <li><a href="#float-and-integer" id="toc-float-and-integer" class="nav-link" data-scroll-target="#float-and-integer">Float and integer</a></li>
   </ul>
 </nav>
 </div>
@@ -120,27 +121,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="taking-the-input-from-user" class="level1">
 <h1>Taking the input from user</h1>
-<div id="6d413396" class="cell" data-tags="[&quot;parameters&quot;]" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Name <span class="op">=</span> <span class="st">"_"</span></span>
+<div id="3f7d5a60" class="cell" data-tags="[&quot;parameters&quot;]" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Name <span class="op">=</span> <span class="st">"Swarup  "</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Welcome, </span><span class="sc">{</span>Name<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Welcome, _</code></pre>
+<pre><code>Welcome, Swarup  </code></pre>
 </div>
 </div>
 </section>
 <section id="comments" class="level1">
 <h1>Comments</h1>
-<div id="cbc6b80f" class="cell" data-execution_count="2">
+<div id="0cb01c02" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this is a comment --&gt; these are the psudocode</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""So this is also a comment"""</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>'So this is also a comment'</code></pre>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""So this is also a comment"""</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">'''this is also comment'''</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="48">
+<pre><code>'this is also comment'</code></pre>
 </div>
 </div>
 </section>
 <section id="adding-the-in-the-print-function-output" class="level1">
 <h1>Adding the “” in the print function output</h1>
-<div id="cb9257df" class="cell" data-execution_count="3">
+<div id="8a6ff8ba" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'hello "Swarup"'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>hello "Swarup"</code></pre>
@@ -150,21 +152,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="format" class="level1">
 <h1>Format</h1>
 <p>f”” -&gt; this is used for the formating the print function and it is very useful and easy.</p>
-<div id="69bd94e6" class="cell" data-execution_count="4">
+<div id="809a23f0" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Name<span class="op">=</span>Name.title().strip()</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"hello, </span><span class="sc">{</span>Name<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>hello, _</code></pre>
+<pre><code>hello, Swarup</code></pre>
 </div>
 </div>
 </section>
-<section id="most-effective-way" class="level1">
-<h1>Most effective way</h1>
-<p>name= input(“what’s your name?”).strip().title() print(f”hello, {name}“)</p>
-<p>#split the first name and the last name first,last= name.split(” “) print(f”hello, {first}“)</p>
-<p>#creating the simple input to calculate x = int(input(“what’s is x?”))<br>
-y = int(input(“what’s is y?”)) print(x+y)</p>
-<p>#round(number[, ndigits]) x = float(input(“what’s is x?”)) y = float(input(“what’s is y?”)) z = round(x/y, 2) print(z) #just for the more formatting z = x/y print(f”{z:.2f}“)</p>
+<section id="pythonic-1" class="level1">
+<h1>Pythonic 1</h1>
+<div id="275bd679" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#name= input("what's your name? ").strip().title()</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"swarup sarker"</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"hello, </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">#split the first name and the last name</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>first,last<span class="op">=</span> name.split(<span class="st">" "</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"hello, </span><span class="sc">{</span>first<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>hello, swarup sarker
+hello, swarup</code></pre>
+</div>
+</div>
+</section>
+<section id="float-and-integer" class="level1">
+<h1>Float and integer</h1>
+<div id="dce433ef" class="cell" data-tags="[&quot;parameters&quot;]" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#creating the simple input to calculate</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co">#x = int(input("what's is x? "))  </span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span><span class="dv">12</span>                    </span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">#y = int(input("what's is y? "))</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>y<span class="op">=</span><span class="dv">34</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x<span class="op">+</span>y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>46</code></pre>
+</div>
+</div>
+<div id="5ba6ee89" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#round(number, ndigits)</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">#x = float(input("what's is x? "))</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span><span class="fl">12.455</span> </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">#y = float(input("what's is y? "))</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>y<span class="op">=</span><span class="fl">34.234</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="bu">round</span>(x<span class="op">/</span>y, <span class="dv">3</span>)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(z)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.364</code></pre>
+</div>
+</div>
+<p>Others way of formating</p>
+<div id="3aae699c" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> x<span class="op">/</span>y</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>z<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.36</code></pre>
+</div>
+</div>
 </section>
 
 </main>

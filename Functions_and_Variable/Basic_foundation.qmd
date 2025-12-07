@@ -9,7 +9,7 @@ echo: True
 # Taking the input from user
 ```{python}
 #| tags: [parameters]
-Name = "_"
+Name = "Swarup  "
 print(f"Welcome, {Name}")
 ```
 
@@ -17,6 +17,7 @@ print(f"Welcome, {Name}")
 ```{python}
 # this is a comment --> these are the psudocode
 """So this is also a comment"""
+'''this is also comment'''
 ```
 
 # Adding the "" in the print function output
@@ -31,24 +32,40 @@ Name=Name.title().strip()
 print(f"hello, {Name}")
 ```
 
-# Most effective way
-name= input("what's your name? ").strip().title()
+# Pythonic 1
+```{python}
+#name= input("what's your name? ").strip().title()
+name = "swarup sarker"
 print(f"hello, {name}")
 
 #split the first name and the last name
 first,last= name.split(" ")
 print(f"hello, {first}")
+```
 
+# Float and integer
+```{python}
+#| tags: [parameters]
 #creating the simple input to calculate
-x = int(input("what's is x? "))                        
-y = int(input("what's is y? "))
+#x = int(input("what's is x? "))  
+x=12                    
+#y = int(input("what's is y? "))
+y=34
 print(x+y)
+```
 
-#round(number[, ndigits])
-x = float(input("what's is x? "))
-y = float(input("what's is y? "))
-z = round(x/y, 2)
+```{python}
+#round(number, ndigits)
+#x = float(input("what's is x? "))
+x=12.455 
+#y = float(input("what's is y? "))
+y=34.234
+z = round(x/y, 3)
 print(z)
-#just for the more formatting
+```
+
+Others way of formating
+```{python}
 z = x/y
 print(f"{z:.2f}")
+```
