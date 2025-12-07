@@ -1,23 +1,41 @@
-#Just call from the list
+---
+title: List and Dictionary
+author: Durjoy Sarker
+toc: True
+format: html
+echo: True
+---
+
+## List 
+```{python}
 student = ["Durjoy","Swarup","Lipy"]
 print(student[0])
 len(student)
+```
 
-#this is for the things
+### Loop in list
+#### Manually
+```{python}
 for i in range(3):
    print(student[i])
+```
 
-#pythonic
+#### Apply loop in list
+```{python}
 for name in student:
     print(name)
 
+#Other ways
 for i in range(len(student)):
     print(i+1,student[i])
+```
 
 
 
 
-#dictionary
+## Dictionary
+### A simple dictionary
+```{python}
 student = {"Durjoy":"Shylet","Swarup":"Bogura","Lipy":"Bogura"}
 
 #but this is better for the understanding
@@ -27,11 +45,19 @@ student = {
     "Rinky":"Rajshahi"
     }
 print(student["Durjoy"])
+```
 
+### Apply loop in dictionary
+in just the dictionary the el/elment in loop is the first key
+```{python}
 for el in student:
     print(el,student[el],sep=", ")
+```
 
-#list + dictonary
+
+## List + Dictonary
+dictionary within a list
+```{python}
 student = [
     {"Name":"Durjoy", "Home":"Sylhet","Skill":"Guitar"},
     {"Name":"Swarup", "Home":"Bogura","Skill": None},
@@ -40,3 +66,4 @@ student = [
 
 for el in student:
     print(el["Name"],el["Home"],el["Skill"],sep=", ")
+```

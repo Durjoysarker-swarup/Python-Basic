@@ -8,7 +8,7 @@
 
 <meta name="author" content="Durjoy Sarker">
 
-<title>Variable</title>
+<title>List and Dictionary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,18 +59,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="Basic_foundation_files/libs/clipboard/clipboard.min.js"></script>
-<script src="Basic_foundation_files/libs/quarto-html/quarto.js" type="module"></script>
-<script src="Basic_foundation_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="Basic_foundation_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="Basic_foundation_files/libs/quarto-html/popper.min.js"></script>
-<script src="Basic_foundation_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="Basic_foundation_files/libs/quarto-html/anchor.min.js"></script>
-<link href="Basic_foundation_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Basic_foundation_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="Basic_foundation_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="Basic_foundation_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="Basic_foundation_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="List_files/libs/clipboard/clipboard.min.js"></script>
+<script src="List_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="List_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="List_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="List_files/libs/quarto-html/popper.min.js"></script>
+<script src="List_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="List_files/libs/quarto-html/anchor.min.js"></script>
+<link href="List_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="List_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="List_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="List_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="List_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -83,12 +83,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#taking-the-input-from-user" id="toc-taking-the-input-from-user" class="nav-link active" data-scroll-target="#taking-the-input-from-user">Taking the input from user</a></li>
-  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments">Comments</a></li>
-  <li><a href="#adding-the-in-the-print-function-output" id="toc-adding-the-in-the-print-function-output" class="nav-link" data-scroll-target="#adding-the-in-the-print-function-output">Adding the “” in the print function output</a></li>
-  <li><a href="#format" id="toc-format" class="nav-link" data-scroll-target="#format">Format</a></li>
-  <li><a href="#pythonic-1" id="toc-pythonic-1" class="nav-link" data-scroll-target="#pythonic-1">Pythonic 1</a></li>
-  <li><a href="#float-and-integer" id="toc-float-and-integer" class="nav-link" data-scroll-target="#float-and-integer">Float and integer</a></li>
+  <li><a href="#list" id="toc-list" class="nav-link active" data-scroll-target="#list">List</a>
+  <ul class="collapse">
+  <li><a href="#loop-in-list" id="toc-loop-in-list" class="nav-link" data-scroll-target="#loop-in-list">Loop in list</a></li>
+  </ul></li>
+  <li><a href="#dictionary" id="toc-dictionary" class="nav-link" data-scroll-target="#dictionary">Dictionary</a>
+  <ul class="collapse">
+  <li><a href="#a-simple-dictionary" id="toc-a-simple-dictionary" class="nav-link" data-scroll-target="#a-simple-dictionary">A simple dictionary</a></li>
+  <li><a href="#apply-loop-in-dictionary" id="toc-apply-loop-in-dictionary" class="nav-link" data-scroll-target="#apply-loop-in-dictionary">Apply loop in dictionary</a></li>
+  </ul></li>
+  <li><a href="#list-dictonary" id="toc-list-dictonary" class="nav-link" data-scroll-target="#list-dictonary">List + Dictonary</a></li>
   </ul>
 </nav>
 </div>
@@ -96,7 +100,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Variable</h1>
+<h1 class="title">List and Dictionary</h1>
 </div>
 
 
@@ -119,94 +123,102 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="taking-the-input-from-user" class="level1">
-<h1>Taking the input from user</h1>
-<div id="3f7d5a60" class="cell" data-tags="[&quot;parameters&quot;]" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Name <span class="op">=</span> <span class="st">"Swarup  "</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Welcome, </span><span class="sc">{</span>Name<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="list" class="level2">
+<h2 class="anchored" data-anchor-id="list">List</h2>
+<div id="13d09ea5" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>student <span class="op">=</span> [<span class="st">"Durjoy"</span>,<span class="st">"Swarup"</span>,<span class="st">"Lipy"</span>]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(student[<span class="dv">0</span>])</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(student)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Welcome, Swarup  </code></pre>
+<pre><code>Durjoy</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>3</code></pre>
+</div>
+</div>
+<section id="loop-in-list" class="level3">
+<h3 class="anchored" data-anchor-id="loop-in-list">Loop in list</h3>
+<section id="manually" class="level4">
+<h4 class="anchored" data-anchor-id="manually">Manually</h4>
+<div id="8e74129d" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>   <span class="bu">print</span>(student[i])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Durjoy
+Swarup
+Lipy</code></pre>
 </div>
 </div>
 </section>
-<section id="comments" class="level1">
-<h1>Comments</h1>
-<div id="0cb01c02" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this is a comment --&gt; these are the psudocode</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""So this is also a comment"""</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">'''this is also comment'''</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="48">
-<pre><code>'this is also comment'</code></pre>
+<section id="apply-loop-in-list" class="level4">
+<h4 class="anchored" data-anchor-id="apply-loop-in-list">Apply loop in list</h4>
+<div id="a24950d8" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> student:</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(name)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Other ways</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(student)):</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i<span class="op">+</span><span class="dv">1</span>,student[i])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Durjoy
+Swarup
+Lipy
+1 Durjoy
+2 Swarup
+3 Lipy</code></pre>
 </div>
 </div>
 </section>
-<section id="adding-the-in-the-print-function-output" class="level1">
-<h1>Adding the “” in the print function output</h1>
-<div id="8a6ff8ba" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'hello "Swarup"'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="dictionary" class="level2">
+<h2 class="anchored" data-anchor-id="dictionary">Dictionary</h2>
+<section id="a-simple-dictionary" class="level3">
+<h3 class="anchored" data-anchor-id="a-simple-dictionary">A simple dictionary</h3>
+<div id="4f9d9702" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>student <span class="op">=</span> {<span class="st">"Durjoy"</span>:<span class="st">"Shylet"</span>,<span class="st">"Swarup"</span>:<span class="st">"Bogura"</span>,<span class="st">"Lipy"</span>:<span class="st">"Bogura"</span>}</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">#but this is better for the understanding</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>student <span class="op">=</span> {</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Durjoy"</span>:<span class="st">"Shylet"</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Swarup"</span>:<span class="st">"Bogura"</span>,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Rinky"</span>:<span class="st">"Rajshahi"</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(student[<span class="st">"Durjoy"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>hello "Swarup"</code></pre>
+<pre><code>Shylet</code></pre>
 </div>
 </div>
 </section>
-<section id="format" class="level1">
-<h1>Format</h1>
-<p>f”” -&gt; this is used for the formating the print function and it is very useful and easy.</p>
-<div id="809a23f0" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Name<span class="op">=</span>Name.title().strip()</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"hello, </span><span class="sc">{</span>Name<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="apply-loop-in-dictionary" class="level3">
+<h3 class="anchored" data-anchor-id="apply-loop-in-dictionary">Apply loop in dictionary</h3>
+<p>in just the dictionary the el/elment in loop is the first key</p>
+<div id="ae0a87f3" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> el <span class="kw">in</span> student:</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(el,student[el],sep<span class="op">=</span><span class="st">", "</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>hello, Swarup</code></pre>
+<pre><code>Durjoy, Shylet
+Swarup, Bogura
+Rinky, Rajshahi</code></pre>
 </div>
 </div>
 </section>
-<section id="pythonic-1" class="level1">
-<h1>Pythonic 1</h1>
-<div id="275bd679" class="cell" data-execution_count="5">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#name= input("what's your name? ").strip().title()</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"swarup sarker"</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"hello, </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">#split the first name and the last name</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>first,last<span class="op">=</span> name.split(<span class="st">" "</span>)</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"hello, </span><span class="sc">{</span>first<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>hello, swarup sarker
-hello, swarup</code></pre>
-</div>
-</div>
 </section>
-<section id="float-and-integer" class="level1">
-<h1>Float and integer</h1>
-<div id="dce433ef" class="cell" data-tags="[&quot;parameters&quot;]" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#creating the simple input to calculate</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co">#x = int(input("what's is x? "))  </span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span><span class="dv">12</span>                    </span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">#y = int(input("what's is y? "))</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>y<span class="op">=</span><span class="dv">34</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x<span class="op">+</span>y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="list-dictonary" class="level2">
+<h2 class="anchored" data-anchor-id="list-dictonary">List + Dictonary</h2>
+<div id="a8a5c9fa" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>student <span class="op">=</span> [</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    {<span class="st">"Name"</span>:<span class="st">"Durjoy"</span>, <span class="st">"Home"</span>:<span class="st">"Sylhet"</span>,<span class="st">"Skill"</span>:<span class="st">"Guitar"</span>},</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    {<span class="st">"Name"</span>:<span class="st">"Swarup"</span>, <span class="st">"Home"</span>:<span class="st">"Bogura"</span>,<span class="st">"Skill"</span>: <span class="va">None</span>},</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    {<span class="st">"Name"</span>:<span class="st">"Lipy"</span>, <span class="st">"Home"</span>:<span class="st">"Dautchland"</span>, <span class="st">"Skill"</span>:<span class="st">"Dance"</span>}</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> el <span class="kw">in</span> student:</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(el[<span class="st">"Name"</span>],el[<span class="st">"Home"</span>],el[<span class="st">"Skill"</span>],sep<span class="op">=</span><span class="st">", "</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>46</code></pre>
-</div>
-</div>
-<div id="5ba6ee89" class="cell" data-execution_count="7">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#round(number, ndigits)</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">#x = float(input("what's is x? "))</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span><span class="fl">12.455</span> </span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">#y = float(input("what's is y? "))</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>y<span class="op">=</span><span class="fl">34.234</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="bu">round</span>(x<span class="op">/</span>y, <span class="dv">3</span>)</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(z)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>0.364</code></pre>
-</div>
-</div>
-<p>Others way of formating</p>
-<div id="3aae699c" class="cell" data-execution_count="8">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> x<span class="op">/</span>y</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>z<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>0.36</code></pre>
+<pre><code>Durjoy, Sylhet, Guitar
+Swarup, Bogura, None
+Lipy, Dautchland, Dance</code></pre>
 </div>
 </div>
 </section>
